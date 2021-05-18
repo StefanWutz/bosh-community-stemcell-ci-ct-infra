@@ -1,6 +1,6 @@
 # BOSH Community Stemcell CI Infra
 
-Proof of Concept to install [control-tower](https://github.com/EngineerBetter/control-tower) on Google Cloud.
+Proof of Concept to install and maintain [control-tower](https://github.com/EngineerBetter/control-tower) on Google Cloud.
 
 
 ## Requirements
@@ -135,5 +135,16 @@ This will create a new NS entry in the gcp dns hosted zone `ci-cloudfoundry-org`
 - Add real main github team for authentication
 - Add security group/source range to access resources from SAP network to access control-tower metadata
 - More Grafana dashboards for BOSH, credhub, grafana
+- Validate the use of [volatile lifecycle vms](https://github.com/EngineerBetter/control-tower/blob/master/docs/deploy.md#volatile-lifecycle-vms)
 
+# Remarks
+
+## Costs
+Estimated costs per month for GCP can be found under https://github.com/EngineerBetter/control-tower/blob/master/docs/cost.md.
+
+## Using spot instances
+Spot instances can be used to save costs. See https://github.com/EngineerBetter/control-tower/blob/master/docs/deploy.md#volatile-lifecycle-vms on how to use them.
+
+## Managing teams
+Management of teams in concourse can be done using an additional [pipeline](https://github.com/EngineerBetter/concourse-mgmt).
 
