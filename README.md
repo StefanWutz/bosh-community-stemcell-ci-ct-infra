@@ -132,6 +132,7 @@ This will create a new NS entry in the gcp dns hosted zone `ci-cloudfoundry-org`
 
 
 # TODOs
+- Add real main github team for authentication
 - Add security group/source range to access resources from SAP network to access control-tower metadata
 - More Grafana dashboards for BOSH, credhub, grafana
 
